@@ -35,6 +35,20 @@ export const buildLoaders = ({
 		],
 		exclude: '/node_modules/',
 	}
+	const assetImages = {
+		test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+		type: 'asset/resource',
+		generator: {
+			filename: 'static/[hash][ext]',
+		},
+	}
+	const assetFonts = {
+		test: /\.(woff|woff2|eot|ttf|otf)$/i,
+		type: 'asset/resource',
+		generator: {
+			filename: 'static/[hash][ext]',
+		},
+	}
 
-	return [tsLoader, cssLoader, sassLoader]
+	return [tsLoader, assetImages, assetFonts, cssLoader, sassLoader]
 }

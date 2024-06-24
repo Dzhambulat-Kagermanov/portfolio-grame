@@ -26,7 +26,7 @@ export const buildWebpack = (options: IBuildOptions): webpack.Configuration => {
 		},
 		// RESOLVE
 		resolve: buildResolve(options),
-		devtool: isDev ? 'inline-source-map' : false,
+		devtool: 'inline-source-map',
 		devServer: buildDevServer(options),
 	}
 }
