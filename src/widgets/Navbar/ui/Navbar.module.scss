@@ -4,6 +4,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 30px 50px;
+	height: var(--navbar-height);
 	column-gap: 60px;
 	a {
 		color: var(--text-second);

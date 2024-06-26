@@ -1,0 +1,7 @@
+.sidebar {
+	width: 450px;
+	height: calc(100vh - var(--navbar-height));
+	background-color: var(--bg-second);
+}
+.collapsed {
+}
