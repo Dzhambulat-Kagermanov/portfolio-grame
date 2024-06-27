@@ -1,7 +1,36 @@
 .sidebar {
-	width: 450px;
+	width: var(--sidebar-width);
 	height: calc(100vh - var(--navbar-height));
 	background-color: var(--bg-second);
+	transition: 0.3s width ease;
+	overflow: hidden;
+	padding: 20px 20px 20px 50px;
+	display: flex;
+	flex-flow: wrap column;
 }
 .collapsed {
+	width: var(--sidebar-width--collapsed);
+}
+.collapseBtn {
+	align-self: flex-end;
+	width: 60px;
+	display: flex;
+	border-radius: 15px;
+	padding: 15px;
+	scale: -1 1;
+	img {
+		width: 25px;
+		max-width: 25px;
+		height: auto;
+	}
+}
+.collapseBtnActive {
+	scale: 1 1;
+}
+.switchers {
+	flex-grow: 1;
+	margin: 50px 0 0 0;
+	display: flex;
+	flex-flow: wrap column;
+	row-gap: 50px;
 }

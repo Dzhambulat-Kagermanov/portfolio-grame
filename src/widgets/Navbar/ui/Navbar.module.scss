@@ -3,15 +3,18 @@
 	background-color: var(--bg-second);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 30px 50px;
 	height: var(--navbar-height);
 	column-gap: 60px;
+	box-shadow: 0 3px 32px 0 var(--other-color);
 	a {
 		color: var(--text-second);
-		font-size: var(--font-size-b);
+		font-size: var(--font-size-m);
 	}
+	position: relative;
 }
 .links {
 	display: flex;
-	column-gap: 20px;
+	column-gap: 30px;
 }

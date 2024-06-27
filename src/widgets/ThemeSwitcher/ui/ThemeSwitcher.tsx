@@ -1,61 +1,69 @@
 import { FC } from 'react'
+import { Theme, useTheme } from 'app/providers/theme'
+
 import { classNames } from 'shared/lib/classNames'
-import classes from './ThemeSwitcher.module.scss'
-import { useTheme } from 'app/providers/theme'
-import { Theme } from 'app/providers/theme'
-import morningIcon from 'shared/assets/icons/morningTheme.svg'
-import sunsetIcon from 'shared/assets/icons/sunsetTheme.svg'
-import dayIcon from 'shared/assets/icons/dayTheme.svg'
-import nightIcon from 'shared/assets/icons/nightTheme.svg'
+import morningIcon from 'shared/assets/icons/theme/morningTheme.svg'
+import sunsetIcon from 'shared/assets/icons/theme/sunsetTheme.svg'
+import dayIcon from 'shared/assets/icons/theme/dayTheme.svg'
+import nightIcon from 'shared/assets/icons/theme/nightTheme.svg'
 import Button, { ThemeButton } from 'shared/ui/Button/Button'
+import classes from './ThemeSwitcher.module.scss'
 
 interface IThemeSwitcher {
-	className?: string
+  className?: string
 }
 
 const ThemeSwitcher: FC<IThemeSwitcher> = ({ className }) => {
-	const { theme, changeTheme } = useTheme()
-	return (
-		<div className={classNames(classes.switcher, {}, [className])}>
-			<Button
-				onClick={() => {
-					changeTheme(Theme.DAY)
-				}}
-				theme={ThemeButton.OUTLINED}
-			>
-				<img src={dayIcon} alt='Дневная тема' />
-				Day
-			</Button>
+  const { theme, changeTheme } = useTheme()
+  return (
+    <div className={classNames(classes.switcher, {}, [className])}>
+      <Button
+        onClick={() => {
+          changeTheme(Theme.DAY)
+        }}
+        theme={ThemeButton.CLEAR}
+      >
+        <div className={classNames(classes.btnImg, {}, [])}>
+          <img src={dayIcon} alt="Дневная тема" />
+        </div>
+        Day
+      </Button>
 
-			<Button
-				onClick={() => {
-					changeTheme(Theme.MORNING)
-				}}
-				theme={ThemeButton.PRIMARY}
-			>
-				<img src={morningIcon} alt='Утренняя тема' />
-				Morning
-			</Button>
-			<Button
-				onClick={() => {
-					changeTheme(Theme.NIGHT)
-				}}
-				theme={ThemeButton.PRIMARY}
-			>
-				<img src={nightIcon} alt='Ночная тема' />
-				Night
-			</Button>
-			<Button
-				onClick={() => {
-					changeTheme(Theme.SUNSET)
-				}}
-				theme={ThemeButton.PRIMARY}
-			>
-				<img src={sunsetIcon} alt='Вечерняя тема' />
-				Sunset
-			</Button>
-		</div>
-	)
+      <Button
+        onClick={() => {
+          changeTheme(Theme.MORNING)
+        }}
+        theme={ThemeButton.CLEAR}
+      >
+        <div className={classNames(classes.btnImg, {}, [])}>
+          <img src={morningIcon} alt="Утренняя тема" />
+        </div>
+        Morning
+      </Button>
+      <Button
+        onClick={() => {
+          changeTheme(Theme.NIGHT)
+        }}
+        theme={ThemeButton.CLEAR}
+      >
+        <div className={classNames(classes.btnImg, {}, [])}>
+          <img src={nightIcon} alt="Ночная тема" />
+        </div>
+        Night
+      </Button>
+      <Button
+        onClick={() => {
+          changeTheme(Theme.SUNSET)
+        }}
+        theme={ThemeButton.CLEAR}
+      >
+        <div className={classNames(classes.btnImg, {}, [])}>
+          <img src={sunsetIcon} alt="Вечерняя тема" />
+        </div>
+        Sunset
+      </Button>
+    </div>
+  )
 }
 
 export { ThemeSwitcher }
