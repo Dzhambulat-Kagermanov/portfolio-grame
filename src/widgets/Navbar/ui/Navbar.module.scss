@@ -8,12 +8,15 @@
 	height: var(--navbar-height);
 	column-gap: 60px;
 	box-shadow: 0 3px 32px 0 var(--other-color);
+
 	a {
 		color: var(--text-second);
 		font-size: var(--font-size-m);
 	}
+
 	position: relative;
 }
+
 .links {
 	display: flex;
 	column-gap: 30px;

@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: wrap;
   row-gap: 30px;
+
   button {
     padding: 0;
     min-width: 70px;
@@ -9,20 +10,22 @@
     display: flex;
     column-gap: 20px;
     align-items: center;
+
     img {
       display: block;
       min-width: 40px;
       max-width: 40px;
       height: 40px;
     }
+
     color: var(--text-second);
   }
 }
+
 .btnImg {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   background-color: var(--other-color);
   border: 2px solid var(--other-color-accent);
   padding: 10px;

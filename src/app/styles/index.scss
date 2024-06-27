@@ -1,9 +1,9 @@
-@import url('./reset.scss');
-@import url('./variables/global.scss');
-@import url('./themes/night.scss');
-@import url('./themes/morning.scss');
-@import url('./themes/sunset.scss');
-@import url('./themes/day.scss');
+@import './reset';
+@import './variables/global';
+@import './themes/night';
+@import './themes/morning';
+@import './themes/sunset';
+@import './themes/day';
 
 .App {
 	font-family: var(--font-family-main);
@@ -12,9 +12,11 @@
 	background-color: var(--bg-primary);
 	min-height: 100vh;
 }
+
 .App__content {
 	display: flex;
 }
+
 .App__pageWrapper {
 	flex-grow: 1;
 	padding: 20px;
