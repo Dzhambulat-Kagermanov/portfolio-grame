@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 import Button, { ThemeButton } from 'shared/ui/Button/Button'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
-import { classNames } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import collapseArrow from 'shared/assets/icons/collapse-arrow.svg'
 import { LangSwitcher } from 'widgets/LangSwitcher'
 import classes from './Sidebar.module.scss'

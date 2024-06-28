@@ -1,6 +1,6 @@
 import { IChildrenProp } from 'app/types/reactChildren'
 import { ButtonHTMLAttributes, FC } from 'react'
-import { classNames } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import classes from './Button.module.scss'
 
 export enum ThemeButton {
@@ -15,9 +15,7 @@ interface IButtonProps
   theme?: ThemeButton
 }
 
-const Button: FC<IButtonProps> = ({
-  children, className, theme, ...other
-}) => (
+const Button: FC<IButtonProps> = ({ children, className, theme, ...other }) => (
   <button
     type="button"
     className={classNames(classes.button, {}, [

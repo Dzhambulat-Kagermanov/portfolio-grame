@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import { Theme, useTheme } from 'app/providers/theme'
-
-import { classNames } from 'shared/lib/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 import morningIcon from 'shared/assets/icons/theme/morningTheme.svg'
 import sunsetIcon from 'shared/assets/icons/theme/sunsetTheme.svg'
 import dayIcon from 'shared/assets/icons/theme/dayTheme.svg'
