@@ -6,18 +6,19 @@
 @import './themes/day';
 
 .App {
-	font-family: var(--font-family-main);
-	font-size: var(--font-size-m);
-	color: var(--text-primary);
-	background-color: var(--bg-primary);
-	min-height: 100vh;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-m);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  min-height: 100vh;
 }
 
 .App__content {
-	display: flex;
+  display: flex;
 }
 
 .App__pageWrapper {
-	flex-grow: 1;
-	padding: 20px;
+  position: relative;
+  flex-grow: 1;
+  padding: 20px;
 }

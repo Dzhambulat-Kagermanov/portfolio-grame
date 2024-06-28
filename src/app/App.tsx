@@ -5,12 +5,13 @@ import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { useTheme } from './providers/theme'
 import { AppRouter } from './providers/router'
+import { PageLoader } from 'widgets/PageLoader'
 
 const App: FC = () => {
   const { theme } = useTheme()
   return (
     <div className={classNames('App', {}, [theme])}>
-      <Suspense fallback="">
+      <Suspense fallback={<PageLoader />}>
         <Navbar />
         <div className="App__content">
           <Sidebar />
