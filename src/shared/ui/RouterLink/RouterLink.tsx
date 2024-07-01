@@ -7,7 +7,9 @@ interface IRouterLink extends LinkProps, IChildrenProp {
   className?: string
 }
 
-const RouterLink: FC<IRouterLink> = ({ to, className, children, ...other }) => (
+const RouterLink: FC<IRouterLink> = ({
+  to, className, children, ...other
+}) => (
   <Link to={to} className={classNames(className)} {...other}>
     {children}
   </Link>

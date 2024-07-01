@@ -1,8 +1,6 @@
 import { FC } from 'react'
 import classes from './Loader.module.scss'
 
-const Loader: FC = () => {
-  return <span className={classes.loader}></span>
-}
+const Loader: FC = () => <span className={classes.loader} />
 
 export { Loader }

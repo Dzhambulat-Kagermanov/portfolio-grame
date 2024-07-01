@@ -15,7 +15,9 @@ interface IButtonProps
   theme?: ThemeButton
 }
 
-const Button: FC<IButtonProps> = ({ children, className, theme, ...other }) => (
+const Button: FC<IButtonProps> = ({
+  children, className, theme, ...other
+}) => (
   <button
     type="button"
     className={classNames(classes.button, {}, [
