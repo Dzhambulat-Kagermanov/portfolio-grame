@@ -6,6 +6,7 @@ import sunsetIcon from 'shared/assets/icons/theme/sunsetTheme.svg'
 import dayIcon from 'shared/assets/icons/theme/dayTheme.svg'
 import nightIcon from 'shared/assets/icons/theme/nightTheme.svg'
 import Button, { ThemeButton } from 'shared/ui/Button/Button'
+import { useTranslation } from 'react-i18next'
 import classes from './ThemeSwitcher.module.scss'
 
 interface IThemeSwitcher {
@@ -14,6 +15,8 @@ interface IThemeSwitcher {
 
 const ThemeSwitcher: FC<IThemeSwitcher> = ({ className }) => {
   const { theme, changeTheme } = useTheme()
+  const { t, i18n } = useTranslation()
+
   return (
     <div className={classNames(classes.switcher, {}, [className])}>
       <Button
@@ -25,7 +28,7 @@ const ThemeSwitcher: FC<IThemeSwitcher> = ({ className }) => {
         <div className={classNames(classes.btnImg, {}, [])}>
           <img src={dayIcon} alt="Дневная тема" />
         </div>
-        Day
+        {t('themeSwitcher.day')}
       </Button>
 
       <Button
@@ -37,7 +40,7 @@ const ThemeSwitcher: FC<IThemeSwitcher> = ({ className }) => {
         <div className={classNames(classes.btnImg, {}, [])}>
           <img src={morningIcon} alt="Утренняя тема" />
         </div>
-        Morning
+        {t('themeSwitcher.morning')}
       </Button>
       <Button
         onClick={() => {
@@ -48,7 +51,7 @@ const ThemeSwitcher: FC<IThemeSwitcher> = ({ className }) => {
         <div className={classNames(classes.btnImg, {}, [])}>
           <img src={nightIcon} alt="Ночная тема" />
         </div>
-        Night
+        {t('themeSwitcher.night')}
       </Button>
       <Button
         onClick={() => {
@@ -59,7 +62,7 @@ const ThemeSwitcher: FC<IThemeSwitcher> = ({ className }) => {
         <div className={classNames(classes.btnImg, {}, [])}>
           <img src={sunsetIcon} alt="Вечерняя тема" />
         </div>
-        Sunset
+        {t('themeSwitcher.sunset')}
       </Button>
     </div>
   )

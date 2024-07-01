@@ -13,9 +13,13 @@ export const Navbar: FC<INavbar> = ({ className }) => {
   return (
     <div className={classNames(classes.navbar, {}, [className])}>
       <div className={classNames(classes.links)}>
-        <RouterLink to="/">{t('navbar-link-home')}</RouterLink>
-        <RouterLink to="/about">{t('navbar-link-about')}</RouterLink>
-        <RouterLink to="/contacts">{t('navbar-link-contacts')}</RouterLink>
+        <RouterLink to="/">{t('navbar-links.navbar-link-home')}</RouterLink>
+        <RouterLink to="/about">
+          {t('navbar-links.navbar-link-about')}
+        </RouterLink>
+        <RouterLink to="/contacts">
+          {t('navbar-links.navbar-link-contacts')}
+        </RouterLink>
       </div>
     </div>
   )

@@ -1,6 +1,14 @@
 {
-	"lang": "England",
-	"navbar-link-home": "Home",
-	"navbar-link-about": "About",
-	"navbar-link-contacts": "Contacts"
+  "lang": "England",
+  "navbar-links": {
+    "navbar-link-home": "Home",
+    "navbar-link-about": "About",
+    "navbar-link-contacts": "Contacts"
+  },
+  "themeSwither": {
+    "day": "Day",
+    "night": "Night",
+    "morning": "Morning",
+    "sunset": "Sunset"
+  }
 }
